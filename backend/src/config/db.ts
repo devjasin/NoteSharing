@@ -8,7 +8,7 @@ const connectToDatabase=async()=>{
     })
   await mongoose.connect(envConfig.mongodbString as string)
   }catch(error){
-    console.log("failed to connect");
+    console.log("failed to connect: because"+ error);
     process.exit(1);
   }
 }
